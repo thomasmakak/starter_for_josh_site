@@ -12,3 +12,13 @@ function load_my_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'load_my_scripts');
 ?>
+<?php
+
+function add_excerpts_to_pages() {
+    add_post_type_support('page', 'excerpt');
+}
+add_action('init', 'add_excerpts_to_pages');
+?>
+<?php
+add_theme_support('post-thumbnails'); 
+?>
